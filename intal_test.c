@@ -204,9 +204,7 @@ int main(int argc, char const *argv[]) {
 			printf("Test intal_factorial FAILED.\nYour answer: %s\nExpected answer: %s\n", result1, "93326215443944152681699238856266700490715968264381621468592963895217599993229915608941463976156518286253697920827223758251185210916864000000000000000000000000");
 		}
 		free(result1);
-	}
-
-	
+	}	
 
 	
 	index1 = intal_max(a, n);
@@ -230,24 +228,7 @@ int main(int argc, char const *argv[]) {
 		printf("Test intal_search FAILED.\nYour answer: %d\nExpected answer: %d\n", index1, 6);
 	}
 
-	
-	intal_sort(a, n);
-	printf("\nTest intal_sort PASSED only if the following sequence of %d intals are sorted in nondecreasing order.\n", n);
-	for (int i = 0; i < n; i++) {
-		printf("%s\n", a[i]);
-	}
-	printf("\n");
 
-	index1 = intal_binsearch(a, n, "3");
-	if(1 == index1) {
-		printf("Test intal_binsearch and probably intal_sort PASSED\n");
-	} else {
-		printf("Test intal_binsearch and probably intal_sort FAILED.\nYour answer: %d\nExpected answer: %d\n", index1, 1);
-	}
-
-	for(int i = 0; i < n; i++) {
-		free(a[i]);
-	}
 	free(a);
 	return 0;
 }
